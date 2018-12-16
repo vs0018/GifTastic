@@ -25,7 +25,7 @@ $("#add").on("click", function(){
 
 $(document).on("click", ".holiday", function(event){
     $("#gif-dump").empty();
-    
+
     var buttonName = $(this).attr("data-name");
 
     console.log(buttonName);
@@ -45,13 +45,20 @@ $(document).on("click", ".holiday", function(event){
       for (var i = 0; i < results.length; i++) {
 
         var gifDiv = $("<div>");
+
         var p = $("<p>");
     
         p.text("Rating: " + results[i].rating);
     
         var gifImage = $("<img>");
 
-        gifImage.attr("src", results[i].images.fixed_height.url);
+        gifImage.attr("src", results[i].images.fixed_height_still.url);
+
+        gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+
+        gifImage.attr("data-animate", results[i].images.fixed_height.url);
+
+        gifImage.attr("data-state", "still");
     
         $(gifDiv).append(p);
         $(gifDiv).append(gifImage);
@@ -61,7 +68,7 @@ $(document).on("click", ".holiday", function(event){
 });
 
 //to start & pause gifs
-$(".gif").on("click", function() {
+$(document).on("click", "img", function() {
     var state = $(this).attr("data-state")
 
         if (state === "still") {
