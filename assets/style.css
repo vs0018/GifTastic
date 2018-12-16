@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+#button-dump {
+    float: left;
+    clear: right;
+}
+
+#gif-dump {
+    float: left;
+    clear: right;
+}
+
+#add-item {
+    float: left;
+    clear: right;
+}
