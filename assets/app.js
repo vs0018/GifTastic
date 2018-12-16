@@ -45,6 +45,8 @@ $(document).on("click", ".holiday", function(event){
       for (var i = 0; i < results.length; i++) {
 
         var gifDiv = $("<div>");
+        
+        gifDiv.addClass("gifDiv");
 
         var p = $("<p>");
     

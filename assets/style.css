@@ -2,6 +2,20 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: lightgrey
+}
+
+/* div {
+    border: 3px;
+    border-color: black;
+    border-style: solid
+} */
+
+.container {
+    overflow: auto
+}
+
 #button-dump {
     float: left;
     clear: right;
@@ -9,10 +23,35 @@
 
 #gif-dump {
     float: left;
-    clear: right;
+    clear: left;
+    width: 75%;
 }
 
 #add-item {
     float: left;
-    clear: right;
+    width: 25%;
+    padding: 5px
+}
+
+.gifDiv {
+    clear: left;
+    display: inline-block;
+    vertical-align: top;
+    margin: 8px
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain
+}
+
+button {
+    margin: 5px;
+    background-color: blueviolet;
+    color: antiquewhite;
+}
+
+p {
+    font-weight: bold;
+    padding: 3px
 }
