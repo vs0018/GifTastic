@@ -30,7 +30,7 @@ $(document).on("click", ".holiday", function(event){
 
     console.log(buttonName);
 
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
       buttonName + "&api_key=Y8jq6XrPYojVO006xsPEuYBovosMxYYZ&limit=10";
 
     $.ajax({
@@ -45,7 +45,7 @@ $(document).on("click", ".holiday", function(event){
       for (var i = 0; i < results.length; i++) {
 
         var gifDiv = $("<div>");
-        
+
         gifDiv.addClass("gifDiv");
 
         var p = $("<p>");
